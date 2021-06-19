@@ -28,22 +28,22 @@ void Empregado::CalcularSalario(float sb)
 	if(salariobase> 1903,99 && salariobase <= 2826,65)
 	{
 		salB = salariobase - salariobase * 0,075;
-		imposto = salariobase - salariol;
+		imposto = salariobase - salB;
 	}
 	if(salariobase> 2826,66 && salariobase <= 3751,05)
 	{
-		salariol = salariobase - salariobase * 0,15;
-		imposto = salariobase - salariol;
+		salB = salariobase - salariobase * 0,15;
+		imposto = salariobase - salB;
 	}
 	if(salariobase> 3751,05 && salariobase <= 4664,68)
 	{
-		salariol = salariobase - salariobase * 0,225;
-		imposto = salariobase - salariol;
+		salB = salariobase - salariobase * 0,225;
+		imposto = salariobase - salB;
 	}
 	if(salariobase> 4664,68)
 	{
-		salariol = salariobase - salariobase * 0,275;
-		imposto = salariobase - salariol;
+		salB = salariobase - salariobase * 0,275;
+		imposto = salariobase - salB;
 	}
 
 
