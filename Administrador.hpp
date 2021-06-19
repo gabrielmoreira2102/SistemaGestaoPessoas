@@ -3,7 +3,7 @@
 #ifndef Administrador_HPP
 #define Administrador_HPP
 
-class Administrador : public Empregado, Pessoa
+class Administrador : public Empregado
 {
 public:
 	Administrador(string n, string end, float s, float ac);
