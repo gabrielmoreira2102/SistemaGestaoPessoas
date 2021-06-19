@@ -7,7 +7,6 @@ class Empregado : public Pessoa
 {
 public:
 	Empregado();
-
 	void virtual CalcularSalario (float sb);
 
 	float getCodSetor();
@@ -23,5 +22,5 @@ protected:
 	float salarioBase;
 	float imposto;
 	float salB;
-
-}
+};
+#endif

@@ -16,36 +16,45 @@ float Empregado::getImposto()
 {
 	return imposto;
 }
+void Empregado::setCodSetor(int cod)
+{
+	codigoSetor = cod;
+}
+void Empregado::setSalario(float salB)
+{
+	salarioBase = salB;
+}
+void Empregado::setImposto(float imp)
+{
+	imposto = imp;
+}
 void Empregado::CalcularSalario(float sb)
 {
 	salarioBase = sb;
 
-	if(salariobase <= 1903,98)
+	if(salarioBase <= 1903.98)
 	{
-		salB = salariobase;
+		salB = salarioBase;
 		imposto = 0;
 	}
-	if(salariobase> 1903,99 && salariobase <= 2826,65)
+	if(salarioBase> 1903.99 && salarioBase <= 2826.65)
 	{
-		salB = salariobase - salariobase * 0,075;
-		imposto = salariobase - salB;
+		salB = salarioBase - salarioBase * 0.075;
+		imposto = salarioBase - salB;
 	}
-	if(salariobase> 2826,66 && salariobase <= 3751,05)
+	if(salarioBase> 2826.66 && salarioBase <= 3751.05)
 	{
-		salB = salariobase - salariobase * 0,15;
-		imposto = salariobase - salB;
+		salB = salarioBase - salarioBase * 0.15;
+		imposto = salarioBase - salB;
 	}
-	if(salariobase> 3751,05 && salariobase <= 4664,68)
+	if(salarioBase> 3751.05 && salarioBase <= 4664.68)
 	{
-		salB = salariobase - salariobase * 0,225;
-		imposto = salariobase - salB;
+		salB = salarioBase - salarioBase * 0.225;
+		imposto = salarioBase - salB;
 	}
-	if(salariobase> 4664,68)
+	if(salarioBase> 4664.68)
 	{
-		salB = salariobase - salariobase * 0,275;
-		imposto = salariobase - salB;
+		salB = salarioBase - salarioBase * 0.275;
+		imposto = salarioBase - salB;
 	}
-
-
-
 }
