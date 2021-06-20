@@ -2,7 +2,6 @@
 #include "Administrador.hpp"
 #include "Operario.hpp"
 #include "Fornecedor.hpp"
-#include "Empregado.hpp"
 #include <vector>
 
 #ifndef SistGes_HPP
@@ -14,9 +13,8 @@ public:
 	SistGes();
 	void adicionaVendedor(string n, string end, string tel, float s, float v);
 	void adicionaAdministrador(string n, string end, string tel, float s, float ac);
-	void adicionaFornecedor(string n, string end, string tel, float saldo);
-	void adicionaOperario(string n, string end, string tel, float salB, float p);
-	void adicionaEmpregado(string n, string end, float cod, float salB);
+	void adicionaFornecedor(string n, string end, string tel, float cred, float div);
+	void adicionaOperario(string n, string end, string tel, float s, float p);
 
 	void Detalhes();
 

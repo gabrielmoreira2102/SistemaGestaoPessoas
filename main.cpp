@@ -23,11 +23,11 @@ int main()
     sg.adicionaOperario("Helo","Joao Wallig 843","987564567",1000.50,150);
 		sg.adicionaOperario("Maria","Dom Joaquim 875","987552237",2000,250);
 
-		sg.adicionaFornecedor("Elma Chips","Av das Industrias 698","33098755",25000);
-    sg.adicionaFornecedor("Ambev","Rua do Cartorio 500","33824425",50500); 
-		sg.adicionaFornecedor("Vonpar","Assis Brasil 9877","33258968",15900.90);
-    sg.adicionaFornecedor("Zaffari","Av Ipiranga 2345","33302569",11100);
-		sg.adicionaFornecedor("Carrefour","Bento Goncalves 7875","33586237",5000);
+		sg.adicionaFornecedor("Elma Chips","Av das Industrias 698","33098755",25000, 5900);
+    sg.adicionaFornecedor("Ambev","Rua do Cartorio 500","33824425",50500, 36000); 
+		sg.adicionaFornecedor("Vonpar","Assis Brasil 9877","33258968",15900.90, 10000);
+    sg.adicionaFornecedor("Zaffari","Av Ipiranga 2345","33302569",11100,15000);
+		sg.adicionaFornecedor("Carrefour","Bento Goncalves 7875","33586237",5000, 400);
 
 		sg.adicionaAdministrador("Gabriel","Carlos Gosmes 758","33098755",15000,5000);
     sg.adicionaAdministrador("Vini","Osvaldo Aranha 234","33824425",100000,10000); 

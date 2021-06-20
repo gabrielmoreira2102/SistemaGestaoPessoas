@@ -4,14 +4,6 @@ Empregado::Empregado()
 {
 
 }
-Empregado::Empregado(string n, string end, string tel, float cod, float salB)
-{
-	nome = n;
-	endereco = end;
-	telefone = tel;
-	codigoSetor = cod;
-	salarioBase = salB;
-}
 float Empregado::getCodSetor()
 {
 	return codigoSetor;

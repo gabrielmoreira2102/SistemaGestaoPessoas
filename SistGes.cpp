@@ -2,23 +2,23 @@
 
 SistGes::SistGes()
 {
-	
+
 }
-void SistGes::adicionaVendedor(string n, string end, string tel, float salB, float v)
+void SistGes::adicionaVendedor(string n, string end, string tel, float s, float v)
 {
-	vendedores.push_back(Vendedor(n, end, tel, salB, v));
+	vendedores.push_back(Vendedor(n, end, tel, s, v));
 }
-void SistGes::adicionaAdministrador(string n, string end, string tel, float salB, float ac)
+void SistGes::adicionaAdministrador(string nome, string endereco, string telefone, float s, float ac)
 {
-	administradores.push_back(Administrador(n, end, tel, salB, ac));
+	administradores.push_back(Administrador(nome, endereco, telefone, s, ac));
 }
-void SistGes::adicionaFornecedor(string n, string end, string tel, float saldo)
+void SistGes::adicionaFornecedor(string n, string end, string tel, float cred, float div)
 {
-	fornecedores.push_back(Fornecedor(n, end, tel, saldo));
+	fornecedores.push_back(Fornecedor(n, end, tel, cred, div));
 }
-void SistGes::adicionaOperario(string n, string end, string tel, float salB, float p)
+void SistGes::adicionaOperario(string n, string end, string tel, float s, float p)
 {
-	operarios.push_back(Operario(n, end, tel, salB, p));
+	operarios.push_back(Operario(n, end, tel, s, p));
 }
 void SistGes::relatorio()
 {
@@ -49,15 +49,15 @@ void SistGes::relatorio()
 }
 void SistGes::Detalhes()
 {
-	int a = 10, b = 0, c = 0, d = 0, s = 0;
-	float sala, var;
-	string no, nome, tel, ende;
+	int a = 10, b = 0, c = 0, d = 0;
+	string n, end, tel;
+	float s, v, p, cred, div, ac;
 	while (a != 0)
 	{
-		cout << "\n1- Lista de vendedores: " << endl;
-		cout << "\n2- Lista de fornecedores: " << endl;
-		cout << "\n3- Lista de admistradores: " << endl;
-		cout << "\n4- Lista de operarios: " << endl;
+		cout << "\n1- Vendedores cadastrados: " << endl;
+		cout << "\n2- Fornecedores cadastrados: " << endl;
+		cout << "\n3- Admistradores cadastrados: " << endl;
+		cout << "\n4- Operarios cadastrados: " << endl;
 		cout << "\n5- Relatorio: " << endl;
 		cout << "\n0- Sair: " << endl;
 		cin >> a;
