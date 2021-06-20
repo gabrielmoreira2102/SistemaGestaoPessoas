@@ -40,3 +40,15 @@ void Pessoa::Detalhes()
 	cout << "\nEndereco: " << endereco << endl;
 	cout << "\nTelefone: " << telefone << endl;
 }
+void Pessoa::Adiciona()
+{
+	cout << "\nDigite o nome: " << nome << endl;
+	cout << "\nDigite o endereco: " << endereco << endl;
+	cout << "\nDigite o telefone: " << telefone << endl;
+}
+void Pessoa::Atualiza()
+{
+	cout << "\nDigite novo nome: "; cin >> nome;
+	cout << "\nDigite novo endereco: "; cin >> endereco;
+	cout << "\nDigite o telefone: "; cin >> telefone;
+}

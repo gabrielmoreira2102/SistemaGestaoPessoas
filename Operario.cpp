@@ -1,12 +1,15 @@
 #include "Operario.hpp"
-
-Operario::Operario(string n, string end, float s, float p)
+Operario::Operario()
 {
-	nome = n;
-	endereco = end;
+
+}
+Operario::Operario(string n, string end, string tel, float salB, float p)
+{
+	this->nome = nome;
+	this->endereco = endereco;
+	this->telefone = telefone;
 	salarioBase = salB;
 	valProd = p;
-	CalcularSalario(s);
 }
 void Operario::CalcularSalario(float s)
 {
@@ -54,4 +57,56 @@ void Operario::setProduto(float p)
 {
 	valProd = p;
 	CalcularSalario(salarioBase);
+}
+void Operario::Adiciona()
+{
+	cout << " Digite o nome: ";	cin >> nome;
+	cout << " Digite o endereco: "; cin >> endereco;
+	cout << " Digite o telefone "; cin >> telefone;
+	cout << " Digite o salario base: "; cin >> salarioBase;
+	cout << " Digite o valor da producao: "; cin >> valProd;
+	adicionaOperario (nome, endereco, telefone, salB, valProd);
+}
+int t = 0;
+void Operario::Atualiza()
+{
+	t = 0;
+	for(int i = 0; i < operarios.size(); i++)
+	{
+		cout << "\nNome do vendedor : " << operarios[i].getNome() << endl;
+	}
+		cout << "\nDigite o nome do vendedor: "; cin >> nome;
+	for(int i = 0; i < operarios.size(); i++)
+	{
+		if (nome == operarios[i].getNome ())
+		{
+			while(t != 0)
+			{
+				cout << "\n1 - Atualizar nome: " << endl;
+				cout << "\n2 - Atualizar salario: " << endl;
+				cout << "\n3 - Atualizar Valor de vendas: " << endl;
+				cout << "\n0 - Sair: " << endl;
+				cin >> t;
+				if (t == 1 )
+				{
+					cout << "\nDigite o novo nome: "; cin >> nome;
+					operarios[i].setNome(nome);
+					cout << "\nNome atualizado com sucesso: " << operarios[i].getNome() << endl;
+				}
+				if (t == 2)
+				{
+					cout << "\nDigite o novo salario base: "; cin >> salB;
+					operarios[i].CalcularSalario(salB);
+					cout << "\nValor do salario base atualizado com sucesso: " << operarios[i].getSalario() << endl;
+				}
+				if (t == 3)
+				{
+					cout << "\nDigite o novo valor da producao: "; cin >> valProd;
+					operarios[i].setProduto(valProd);
+					cout << "\nValor da producao atualizado com sucesso: " << operarios[i].getValProd() << endl;
+				}
+			break;	
+			}
+		}	
+	}
 }

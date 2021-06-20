@@ -1,24 +1,20 @@
 #include "SistGes.hpp"
 
-void SistGes::adicionaVendedor(string n, string end, string tel, float salB, float s, float v)
+void SistGes::adicionaVendedor(string n, string end, string tel, float salB, float v)
 {
-	vendedores.push_back(Vendedor(n, end, tel, salB, s, v));
+	vendedores.push_back(Vendedor(n, end, tel, salB, v));
 }
 void SistGes::adicionaAdministrador(string n, string end, float s, float ac)
 {
 	administradores.push_back(Administrador(n, end, s, ac));
 }
-void SistGes::adicionaFornecedor(string n, string end, string tel, float cred, float div, float saldo)
+void SistGes::adicionaFornecedor(string n, string end, string tel, float saldo)
 {
-	fornecedores.push_back(Fornecedor(n, end, tel, cred, div, saldo));
+	fornecedores.push_back(Fornecedor(n, end, tel, saldo));
 }
-void SistGes::adicionaOperario(string n, string end, float s, float p)
+void SistGes::adicionaOperario(string n, string end, string tel, float salB, float p)
 {
-	operarios.push_back(Operario(n, end, s, p));
-}
-void SistGes::adicionaEmpregado(string n, string end, float cod, float salB)
-{
-	empregados.push_back(Operario(n, end, cod, salB));
+	operarios.push_back(Operario(n, end, tel, salB, p));
 }
 void SistGes::relatorio()
 {
