@@ -6,9 +6,9 @@ Vendedor::Vendedor()
 }
 Vendedor::Vendedor(string n, string end, string tel, float salB, float v)
 {
-	this->nome = nome;
-	this->endereco = endereco;
-	this->telefone = telefone;
+	nome = n;
+	endereco = end;
+	telefone = tel;
 	salarioBase = salB;
 	valVenda = v;
 }
@@ -68,10 +68,10 @@ void Vendedor::Adiciona()
 	cout << " Digite o valor de vendas: "; cin >> valVenda;
 	adicionaVendedor (nome, endereco, telefone, salB, valVenda);
 }
-int t = 0;
+int t = 10;
 void Vendedor::Atualiza()
 {
-	t = 0;
+	t = 10;
 	for(int i = 0; i < vendedores.size(); i++)
 	{
 		cout << "\nNome do vendedor : " << vendedores[i].getNome() << endl;

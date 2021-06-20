@@ -1,9 +1,14 @@
 #include "SistGes.hpp"
+#include "Vendedor.hpp"
+#include "Administrador.hpp"
+#include "Operario.hpp"
+#include "Fornecedor.hpp"
+#include "Empregado.hpp"
 #include <iostream>
 
 int main()
 {
-    int b = 10;
+    int o = 10;
     SistGes sg;
 
     sg.adicionaVendedor("Michele","Av.Ipiranga 9000","999856980",10500,500);
@@ -23,4 +28,29 @@ int main()
 		sg.adicionaFornecedor("Vonpar","Assis Brasil 9877","33258968",15900.90);
     sg.adicionaFornecedor("Zaffari","Av Ipiranga 2345","33302569",11100);
 		sg.adicionaFornecedor("Carrefour","Bento Goncalves 7875","33586237",5000);
+
+		sg.adicionaAdministrador("Gabriel","Carlos Gosmes 758","33098755",15000,5000);
+    sg.adicionaAdministrador("Vini","Osvaldo Aranha 234","33824425",100000,10000); 
+		sg.adicionaAdministrador("Frosi","Manoel Elias 365","33278568",10000,2500);
+    sg.adicionaAdministrador("Antonio","Sertorio 9389","33389589",12000,3000);
+		sg.adicionaAdministrador("Emmanuel","Jose de Alencar 476","35896837",9000,1000);
+
+		while (o != 0)
+    {
+    	cout << " -------------------------------------------- " << endl;
+			cout << "                 Menu Inicial                 " << endl;
+      cout << " -------------------------------------------- " << endl;
+      cout << " 1 - Acessar detalhes do Sistema de Gestao:   " << endl;
+      cout << " 0 - Sair:   " << endl;
+      cin >> o;
+      switch(o)
+      {
+       case 1:
+          sg.Detalhes();
+          break;
+       default:
+      	  cout << " numero invalido !!! " << endl;
+          break;
+      }
+    }
 }

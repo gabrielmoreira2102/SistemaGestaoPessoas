@@ -7,7 +7,7 @@ class Empregado : public Pessoa
 {
 public:
 	Empregado();
-	Empregado(string n, string end, float cod, float salB);
+	Empregado(string n, string end, string tel, float cod, float salB);
 	void virtual CalcularSalario (float sb);
 	void virtual Detalhes();
 

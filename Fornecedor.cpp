@@ -1,46 +1,47 @@
 #include "Fornecedor.hpp"
-	Fornecedor::Fornecedor()
-	{
+
+Fornecedor::Fornecedor()
+{
 		
-	}
-	Fornecedor::Fornecedor(string n, string end, string tel, float saldo)
-	{
-		this->nome = nome;
-		this->endereco = endereco;
-		this->telefone = telefone;
-		this->saldo = saldo; 
-	}
-	float Fornecedor::getSaldo()
-	{
-		return saldo;
-	}
-	float Fornecedor::getCredito()
-	{
-		return credito;
-	}
-	float Fornecedor::getDivida()
-	{
-		return divida;
-	}
-	void Fornecedor::ObterSaldo()
-	{
-		saldo = credito - divida;
-	}
-	void Fornecedor::setCredito(float cred)
-	{
-		credito = cred;
-		ObterSaldo();
-	}
-	void Fornecedor::setDivida(float div)
-	{
-		divida = div;
-		ObterSaldo();
-	}
-	void Fornecedor::setSaldo(float saldo)
-	{
-		this->saldo = saldo;
-	}
-	void Fornecedor::Detalhes()
+}
+Fornecedor::Fornecedor(string n, string end, string tel, float saldo)
+{
+	nome = n;
+	endereco = end;
+	telefone = tel;
+	this->saldo = saldo; 
+}
+float Fornecedor::getSaldo()
+{
+	return saldo;
+}
+float Fornecedor::getCredito()
+{
+	return credito;
+}
+float Fornecedor::getDivida()
+{
+	return divida;
+}
+void Fornecedor::ObterSaldo()
+{
+	saldo = credito - divida;
+}
+void Fornecedor::setCredito(float cred)
+{
+	credito = cred;
+	ObterSaldo();
+}
+void Fornecedor::setDivida(float div)
+{
+	divida = div;
+	ObterSaldo();
+}
+void Fornecedor::setSaldo(float saldo)
+{
+	this->saldo = saldo;
+}
+void Fornecedor::Detalhes()
 {
 	cout << "\nNome: " << nome << endl;
 	cout << "\nEndereco: " << endereco << endl;
@@ -55,10 +56,10 @@ void Fornecedor::Adiciona()
 	cout << " Digite o saldo do fornecedor: "; cin >> saldo;
 	adicionaFornecedor (nome, endereco, telefone, saldo);
 }
-int t = 0;
+int p = 10;
 void Fornecedor::Atualiza()
 {
-	t = 0;
+	p = 10;
 	for(int i = 0; i < fornecedores.size(); i++)
 	{
 		cout << "\nNome do vendedor : " << fornecedores[i].getNome() << endl;
@@ -68,19 +69,19 @@ void Fornecedor::Atualiza()
 	{
 		if (nome == fornecedores[i].getNome ())
 		{
-			while(t != 0)
+			while(p != 0)
 			{
 				cout << "\n1 - Atualizar nome: " << endl;
 				cout << "\n2 - Atualizar o saldo do fornecedor: " << endl;
 				cout << "\n0 - Sair: " << endl;
-				cin >> t;
-				if (t == 1 )
+				cin >> p;
+				if (p == 1 )
 				{
 					cout << "\nDigite o novo nome: "; cin >> nome;
 					fornecedores[i].setNome(nome);
 					cout << "\nNome atualizado com sucesso: " << fornecedores[i].getNome() << endl;
 				}
-				if (t == 2)
+				if (p == 2)
 				{
 					cout << "\nDigite o novo saldo do fornecedor: "; cin >> saldo;
 					fornecedores[i].setSaldo(saldo);

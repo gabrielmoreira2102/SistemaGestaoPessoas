@@ -5,9 +5,9 @@ Operario::Operario()
 }
 Operario::Operario(string n, string end, string tel, float salB, float p)
 {
-	this->nome = nome;
-	this->endereco = endereco;
-	this->telefone = telefone;
+	nome = n;
+	endereco = end;
+	telefone = tel;
 	salarioBase = salB;
 	valProd = p;
 }
@@ -67,10 +67,10 @@ void Operario::Adiciona()
 	cout << " Digite o valor da producao: "; cin >> valProd;
 	adicionaOperario (nome, endereco, telefone, salB, valProd);
 }
-int t = 0;
+int o = 10;
 void Operario::Atualiza()
 {
-	t = 0;
+	o = 10;
 	for(int i = 0; i < operarios.size(); i++)
 	{
 		cout << "\nNome do vendedor : " << operarios[i].getNome() << endl;
@@ -80,26 +80,26 @@ void Operario::Atualiza()
 	{
 		if (nome == operarios[i].getNome ())
 		{
-			while(t != 0)
+			while(o != 0)
 			{
 				cout << "\n1 - Atualizar nome: " << endl;
 				cout << "\n2 - Atualizar salario: " << endl;
 				cout << "\n3 - Atualizar Valor de vendas: " << endl;
 				cout << "\n0 - Sair: " << endl;
-				cin >> t;
-				if (t == 1 )
+				cin >> o;
+				if (o == 1 )
 				{
 					cout << "\nDigite o novo nome: "; cin >> nome;
 					operarios[i].setNome(nome);
 					cout << "\nNome atualizado com sucesso: " << operarios[i].getNome() << endl;
 				}
-				if (t == 2)
+				if (o == 2)
 				{
 					cout << "\nDigite o novo salario base: "; cin >> salB;
 					operarios[i].CalcularSalario(salB);
 					cout << "\nValor do salario base atualizado com sucesso: " << operarios[i].getSalario() << endl;
 				}
-				if (t == 3)
+				if (o == 3)
 				{
 					cout << "\nDigite o novo valor da producao: "; cin >> valProd;
 					operarios[i].setProduto(valProd);
