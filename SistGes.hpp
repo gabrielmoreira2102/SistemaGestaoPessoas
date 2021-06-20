@@ -11,7 +11,7 @@
 class SistGes
 {
 public:
-	void adicionaVendedor(string n, string end, float s, float v);
+	void adicionaVendedor(string n, string end, string tel, float salB, float s, float v);
 	void adicionaAdministrador(string n, string end, float s, float ac);
 	void adicionaFornecedor(string n, string end, string tel, float cred, float div, float saldo);
 	void adicionaOperario(string n, string end, float s, float p);
@@ -22,7 +22,7 @@ public:
 private:
 	void relatorio();
 	string nome;
-	dtring endereco;
+	string endereco;
 	vector <Vendedor> vendedores;
 	vector <Administrador> administradores;
 	vector <Fornecedor> fornecedores;

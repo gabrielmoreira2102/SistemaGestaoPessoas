@@ -6,18 +6,18 @@
 class Vendedor : public Empregado
 {
 public:
-	Vendedor(string n, string end, float s, float v);
+	Vendedor();
+	Vendedor(string n, string end, string tel, float salB, float s, float v);
 	void CalcularSalario(float s);
 
 	float getValVenda();
 	float getSalario();
 	float getImposto();
 
-	void setVenda(float v);
+	void setValVenda(float v);
 
 private:
 	float valVenda;
 	float comissao;
 };
 #endif
-}

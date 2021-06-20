@@ -1,8 +1,8 @@
 #include "SistGes.hpp"
 
-void SistGes::adicionaVendedor(string n, string end, float s, float v)
+void SistGes::adicionaVendedor(string n, string end, string tel, float salB, float s, float v)
 {
-	vendedores.push_back(Vendedor(n, end, s, v));
+	vendedores.push_back(Vendedor(n, end, tel, salB, s, v));
 }
 void SistGes::adicionaAdministrador(string n, string end, float s, float ac)
 {
@@ -22,22 +22,22 @@ void SistGes::adicionaEmpregado(string n, string end, float cod, float salB)
 }
 void SistGes::relatorio()
 {
-	for(int i = 0; i <operarios.size(); i++)
+	for(int i = 0; i < operarios.size(); i++)
 	{
 	   despesa += operarios[i].getSalario();
 	   tributos += operarios[i].getImposto();
 	}
-	for(int i = 0; i <administradores.size(); i++)
+	for(int i = 0; i < administradores.size(); i++)
 	{
 		despesa += administradores[i].getSalario();
 		tributos += administradores[i].getImposto();
 	}
-	for(int i = 0; i <vendedores.size(); i++)
+	for(int i = 0; i < vendedores.size(); i++)
 	{
 		despesa += vendedores[i].getSalario();
 		tributos += vendedores[i].getImposto();
 	}
-	for(int i = 0; i <fornecedores.size(); i++)
+	for(int i = 0; i < fornecedores.size(); i++)
 	{
 		if( 0 >fornecedores[i].getSaldo())
 		recebiveis -= fornecedores[i].getSaldo();	

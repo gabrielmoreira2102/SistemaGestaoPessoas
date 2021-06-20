@@ -1,9 +1,14 @@
 #include "Vendedor.hpp"
 
-Vendedor::Vendedor(string n, string end, float s, float v)
+Vendedor::Vendedor()
+{
+
+}
+Vendedor::Vendedor(string n, string end, string tel, float salB, float s, float v)
 {
 	nome = n;
 	endereco = end;
+	telefone = tel;
 	salarioBase = salB;
 	valVenda = v;
 	CalcularSalario(s);
@@ -50,7 +55,7 @@ float Vendedor::getValVenda()
 {
 	return valVenda;
 }
-void Vendedor::setVenda(float v)
+void Vendedor::setValVenda(float v)
 {
 	valVenda = v;
 	CalcularSalario(salarioBase);

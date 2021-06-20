@@ -20,7 +20,7 @@ public:
 	void setTelefone(string tel);
 
 protected:
-	string nome static;
+	string nome;
 	string endereco;
 	string telefone;
 };

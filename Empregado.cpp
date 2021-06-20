@@ -1,5 +1,9 @@
 #include "Empregado.hpp"
 
+Empregado::Empregado()
+{
+
+}
 Empregado::Empregado(string n, string end, float cod, float salB)
 {
 	nome = n;
