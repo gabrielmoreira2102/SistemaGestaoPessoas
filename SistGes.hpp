@@ -20,7 +20,7 @@ public:
 	void Detalhes();
 
 private:
-	void financeiro();
+	void relatorio();
 	string nome;
 	dtring endereco;
 	vector <Vendedor> vendedores;

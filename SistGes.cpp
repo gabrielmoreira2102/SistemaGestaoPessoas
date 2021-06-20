@@ -20,7 +20,7 @@ void SistGes::adicionaEmpregado(string n, string end, float cod, float salB)
 {
 	empregados.push_back(Operario(n, end, cod, salB));
 }
-void SistGes::financeiro()
+void SistGes::relatorio()
 {
 	for(int i = 0; i <operarios.size(); i++)
 	{
