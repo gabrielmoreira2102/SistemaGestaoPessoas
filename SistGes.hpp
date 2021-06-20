@@ -17,6 +17,8 @@ public:
 	void adicionaOperario(string n, string end, string tel, float s, float p);
 
 	void Detalhes();
+	void Atualiza();
+	void Adiciona();
 
 private:
 	void relatorio();

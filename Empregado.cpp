@@ -60,11 +60,10 @@ void Empregado::CalcularSalario(float sb)
 }
 void Empregado::Detalhes()
 {
-	cout << "\nNome: " << nome << endl;
-	cout << "\nEndereco: " << endereco << endl;
-	cout << "\nTelefone: " << telefone << endl;
-	cout << "\nSalario base: " << salarioBase << endl;
-	cout << "\nSalario liquido: " << salB << endl;
-	cout << "\nTributos: " << imposto << endl;
-	cout << "\nCodigo do setor: " << codigoSetor << endl;
+	cout << " Nome: " << nome << endl;
+	cout << " Endereco: " << endereco << endl;
+	cout << " Telefone: " << telefone << endl;
+	cout << " Salario base: " << salarioBase << endl;
+	cout << " Salario liquido: " << salB << endl;
+	cout << " Tributos: " << imposto << endl;
 }

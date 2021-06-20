@@ -36,7 +36,19 @@ void Pessoa::setTelefone(string tel)
 }
 void Pessoa::Detalhes()
 {
-	cout << "\nNome: " << nome << endl;
-	cout << "\nEndereco: " << endereco << endl;
-	cout << "\nTelefone: " << telefone << endl;
+	cout << " Nome: " << nome << endl;
+	cout << " Endereco: " << endereco << endl;
+	cout << " Telefone: " << telefone << endl;
+}
+void Pessoa::Atualiza()
+{
+	cout << " Nome: " << nome << endl;
+	cout << " Endereco: " << endereco << endl;
+	cout << " Telefone: " << telefone << endl;
+}
+void Pessoa::Adiciona()
+{
+	cout << " Nome: " << nome << endl;
+	cout << " Endereco: " << endereco << endl;
+	cout << " Telefone: " << telefone << endl;
 }

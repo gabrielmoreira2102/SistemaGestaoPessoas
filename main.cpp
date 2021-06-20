@@ -37,18 +37,35 @@ int main()
 
 		while (o != 0)
     {
-    	cout << " -------------------------------------------- " << endl;
-			cout << "                 Menu Inicial                 " << endl;
-      cout << " -------------------------------------------- " << endl;
-      cout << " 1 - Acessar detalhes do Sistema de Gestao:   " << endl;
-      cout << " 0 - Sair:   " << endl;
-      cin >> o;
-      switch(o)
+    	cout << " *********************************************** " << endl;
+			cout << " *      SISTEMA DE GESTAO DE PESSOAS           * " << endl;
+      cout << " *********************************************** " << endl;
+      cout << " *  1 - Acessar detalhes do Sistema de Gestao  * " << endl;
+			cout << " *  2 - Atualiza cadastro                      * " << endl;
+			cout << " *  3 - Adiciona cadastro                      * " << endl;
+      cout << " *  0 - Sair                                   * " << endl;                      
+			cout << " *********************************************** " << endl;
+      cout << "Digite sua opcao: "; cin >> o;
+      cout << endl;
+			switch(o)
       {
        case 1:
           sg.Detalhes();
           break;
-       default:
+       
+			 case 2:
+          sg.Atualiza();
+          break;
+				
+			 case 3:
+          sg.Adiciona();
+          break;
+
+			 case 0:
+          cout << "\nObrigado por acessar o sistema! Ate a proxima..." << endl;
+          break;
+					
+			 default:
       	  cout << " numero invalido !!! " << endl;
           break;
       }

@@ -41,8 +41,9 @@ void Fornecedor::setDivida(float div)
 }
 void Fornecedor::Detalhes()
 {
-	cout << "\nNome: " << nome << endl;
-	cout << "\nEndereco: " << endereco << endl;
-	cout << "\nTelefone: " << telefone << endl;
-	cout << "\nSaldo: " << saldo << endl;
+	cout << " Nome: " << nome << endl;
+	cout << " Endereco: " << endereco << endl;
+	cout << " Telefone: " << telefone << endl;
+	cout << " Saldo: " << saldo << endl;
+	cout << endl;
 }

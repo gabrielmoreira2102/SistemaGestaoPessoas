@@ -10,6 +10,8 @@ public:
 	Pessoa();
 	Pessoa(string n, string end, string tel);
 	void virtual Detalhes();
+	void virtual Atualiza();
+	void virtual Adiciona();
 	
 	string getNome();
 	string getEndereco();
