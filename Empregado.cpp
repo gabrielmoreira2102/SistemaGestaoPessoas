@@ -61,3 +61,13 @@ void Empregado::CalcularSalario(float sb)
 		imposto = salarioBase - salB;
 	}
 }
+void Empregado::Detalhes()
+{
+	cout << "\nNome: " << nome << endl;
+	cout << "\nEndereco: " << endereco << endl;
+	cout << "\nTelefone: " << telefone << endl;
+	cout << "\nSalario base: " << salarioBase << endl;
+	cout << "\nSalario liquido: " << salB << endl;
+	cout << "\nTributos: " << imposto << endl;
+	cout << "\nCodigo do setor: " << codigoSetor << endl;
+}

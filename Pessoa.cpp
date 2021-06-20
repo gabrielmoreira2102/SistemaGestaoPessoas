@@ -34,3 +34,9 @@ void Pessoa::setTelefone(string tel)
 {
 	telefone = tel;
 }
+void Pessoa::Detalhes()
+{
+	cout << "\nNome: " << nome << endl;
+	cout << "\nEndereco: " << endereco << endl;
+	cout << "\nTelefone: " << telefone << endl;
+}

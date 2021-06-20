@@ -8,6 +8,7 @@ class Empregado : public Pessoa
 public:
 	Empregado(string n, string end, float cod, float salB);
 	void virtual CalcularSalario (float sb);
+	void virtual Detalhes();
 
 	float getCodSetor();
 	float getSalario();

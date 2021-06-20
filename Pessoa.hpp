@@ -9,6 +9,7 @@ class Pessoa
 public:
 	Pessoa();
 	Pessoa(string n, string end, string tel);
+	void virtual Detalhes();
 
 	string getNome();
 	string getEndereco();

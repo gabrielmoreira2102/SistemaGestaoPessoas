@@ -39,4 +39,10 @@
 	{
 		this->saldo = saldo;
 	}
-	
+	void Fornecedor::Detalhes()
+{
+	cout << "\nNome: " << nome << endl;
+	cout << "\nEndereco: " << endereco << endl;
+	cout << "\nTelefone: " << telefone << endl;
+	cout << "\nSaldo: " << saldo << endl;
+}

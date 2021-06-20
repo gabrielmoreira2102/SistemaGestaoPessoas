@@ -8,6 +8,7 @@ class Fornecedor : public Pessoa
 public:
 	Fornecedor(string n, string end, string tel, float cred, float div, float saldo);
 	void ObterSaldo();
+	void Detalhes();
 
 	float getSaldo();
 	float getCredito();

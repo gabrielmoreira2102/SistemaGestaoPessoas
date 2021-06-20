@@ -13,22 +13,25 @@ class SistGes
 public:
 	void adicionaVendedor(string n, string end, float s, float v);
 	void adicionaAdministrador(string n, string end, float s, float ac);
-	void adicionaFornecedor(string n, string end, string tel, float cred, float div);
+	void adicionaFornecedor(string n, string end, string tel, float cred, float div, float saldo);
 	void adicionaOperario(string n, string end, float s, float p);
 	void adicionaEmpregado(string n, string end, float cod, float salB);
+
+	void Detalhes();
 
 private:
 	void financeiro();
 	string nome;
+	dtring endereco;
 	vector <Vendedor> vendedores;
 	vector <Administrador> administradores;
 	vector <Fornecedor> fornecedores;
 	vector <Operario> operarios;
 	vector <Empregado> empregados;
-
-
-
-
+	float lucro;
+	float despesa;
+	float recebiveis;
+	float tributos;
 };
 #endif
 
