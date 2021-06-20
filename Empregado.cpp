@@ -1,8 +1,11 @@
 #include "Empregado.hpp"
 
-Empregado::Empregado()
+Empregado::Empregado(string n, string end, float cod, float salB)
 {
-
+	nome = n;
+	endereco = end;
+	codigoSetor = cod;
+	salarioBase = salB;
 }
 float Empregado::getCodSetor()
 {
