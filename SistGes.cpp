@@ -159,9 +159,10 @@ void SistGes::Atualiza()
 					for(int i = 0; i < vendedores.size(); i++)
 					{
 						cout << " Nome do vendedor : " << vendedores[i].getNome() << endl;
-						cout << endl;
 					}
+					cout << endl;
 					cout << " Digite o nome do vendedor a ser atualizado: "; cin >> n;
+					cout << endl;
 					for(int i = 0; i < vendedores.size(); i++)
 					{
 						if (n == vendedores[i].getNome ())
@@ -364,55 +365,68 @@ void SistGes::Adiciona()
 	int q = 10;
 	string n, end, tel;
 	float s, v, div, cred, ac, p;
-	while(q != 0 )
-			{
-				cout << " 1 - Adicionar vendedores: " << endl;
-				cout << " 2 - Adicionar fornecedores: " << endl;
-				cout << " 3 - Adicionar admistradores: " << endl;
-				cout << " 4 - Adicionar operarios: " << endl;
-				cout << " 0 - sair: " << endl;
-				cout << " Digite sua opcao: "; cin >> p;
-				cout << endl;
+	while(q != 0 ){
+			cout << " 1 - Adicionar vendedores: " << endl;
+			cout << " 2 - Adicionar fornecedores: " << endl;
+			cout << " 3 - Adicionar admistradores: " << endl;
+			cout << " 4 - Adicionar operarios: " << endl;
+			cout << " 0 - sair: " << endl;
+			cout << " Digite sua opcao: "; cin >> q;
+			cout << endl;
 
-				if(q == 1)
-				{
+			switch (q)
+			{
+
+			case 1:
 					cout << " Digite o nome: "; cin >> n;
 					cout << " Digite endereco: "; cin >> end;
-					cout << " Digite telefone "; cin >> tel;
+					cout << " Digite telefone: "; cin >> tel;
 					cout << " Digite Salario: "; cin >> s;
 					cout << " Digite Valor de vendas: "; cin >> v;
+					cout << endl;
 					adicionaVendedor(n, end, tel, s, v);
-				}
+					break;
 
-				if(q == 2)
-				{
+			case 2:
 					cout << " Digite o nome: "; cin >> n;
 					cout << " Digite o endereco: "; cin >> end;
-					cout << " Digite o telefone "; cin >> tel;
+					cout << " Digite o telefone: "; cin >> tel;
 					cout << " Digite o valor do credito: "; cin >> cred;
 					cout << " Digite o valor da divida: "; cin >> div;
+					cout << endl;
 					adicionaFornecedor (n, end, tel, cred, div);
-				}
-				
-				if(q == 3)
-				{
+					break;
+
+			case 3:
 					cout << " Digite o nome: "; cin >> n;
 					cout << " Digite o endereco: "; cin >> end;
-					cout << " Digite o telefone "; cin >> tel;
+					cout << " Digite o telefone: "; cin >> tel;
 					cout << " Digite o salario: "; cin >> s;
 					cout << " Digite o valor da ajuda de custo: "; cin >> ac;
+					cout << endl;
 					adicionaAdministrador (n, end, tel, s, ac);
-				}
-				
-				if(q == 4)
-				{
+					break;
+			
+			case 4:
 					cout << " Digite o nome: "; cin >> n;
 					cout << " Digite endereco: "; cin >> end;
-					cout << " Digite telefone "; cin >> tel;
+					cout << " Digite telefone: "; cin >> tel;
 					cout << " Digite Salario: "; cin >> s;
 					cout << " Digite Valor de producao: "; cin >> p;
+					cout << endl;
 					adicionaOperario (n, end, tel, s, p);
-				}
+					break;
+
+			case 0:
+      		cout << "\nObrigado por acessar o sistema! Ate a proxima..." << endl;
+					cout << endl;
+      		break;
+
+				default:
+      		cout << " numero invalido !!! " << endl;
+					cout << endl;
+      		break;
 			}
+	}
 }
 	
