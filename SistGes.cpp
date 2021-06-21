@@ -149,7 +149,8 @@ void SistGes::Atualiza()
 				cout << " 3 - Admistradores: " << endl;
 				cout << " 4 - Operários: " << endl;
 				cout << " 0 - Sair: " << endl;
-				cin >> o;
+				cout << " Digite sua opcao: "; cin >> o;
+				cout << endl;
 
 				switch(o)
 				{
@@ -158,8 +159,9 @@ void SistGes::Atualiza()
 					for(int i = 0; i < vendedores.size(); i++)
 					{
 						cout << " Nome do vendedor : " << vendedores[i].getNome() << endl;
+						cout << endl;
 					}
-					cout << " Digite o nome do vendedor: "; cin >> n;
+					cout << " Digite o nome do vendedor a ser atualizado: "; cin >> n;
 					for(int i = 0; i < vendedores.size(); i++)
 					{
 						if (n == vendedores[i].getNome ())
@@ -177,24 +179,25 @@ void SistGes::Atualiza()
 								{
 									cout << " Digite novo nome: "; cin >> n;
 									vendedores[i].setNome(n);
-									cout << " Nome atualizado com sucesso! " << vendedores[i].getNome() << endl;
+									cout << "\tNome atualizado com sucesso!" << vendedores[i].getNome() << endl;
+									cout << endl;
 								}
 								if (t == 2)
 								{
-									cout << " Digite novo salario: "; cin >> s;
+									cout << " Digite novo salario base: "; cin >> s;
 									vendedores[i].CalcularSalario(s);
-									cout << " Salario atualizado com sucesso! " << vendedores[i].getSalario() << endl;
+									cout << "\tSalario atualizado com sucesso!" << vendedores[i].getSalario() << endl;
+									cout << endl;
 								}
 								if (t == 3)
 								{
 									cout << " Digite novo valor vendas: "; cin >> v;
 									vendedores[i].setValVenda(v);
-									cout << " Valor de venda atualizado com sucesso! " << vendedores[i].getValVenda() << endl;
-
+									cout << " Valor de venda atualizado com sucesso!" << vendedores[i].getValVenda() << endl;
+									cout << endl;
 								}
 							}
 						}
-						
 					}
 					break;
 					
@@ -203,11 +206,13 @@ void SistGes::Atualiza()
 					{
 						cout << " Nome do fornecedor: " << fornecedores[i].getNome() << endl;
 					}
-					cout << " Digite o nome do Fornecedor: "; cin >> n;
+					cout << endl;
+					cout << " Digite o nome do fornecedor a ser atualizado: "; cin >> n;
+					cout << endl;
 					for(int i = 0; i < fornecedores.size(); i++)
 					{
-						if(n == fornecedores[i].getNome()){
-
+						if(n == fornecedores[i].getNome())
+						{
 							while(t != 0)
 							{
 								cout << " 1 - Atualizar nome: " << endl;
@@ -221,25 +226,27 @@ void SistGes::Atualiza()
 								{
 									cout << " Digite novo nome: "; cin >> n;
 									fornecedores[i].setNome (n);
-									cout << " Nome atualizado com sucesso! " << fornecedores[i].getNome () << endl;
+									cout << "\tNome atualizado com sucesso!" << fornecedores[i].getNome() << endl;
+									cout << endl;
 								}
 
 								if(t == 2)
 								{
 									cout << " Digite novo credito: "; cin >> cred;
 									fornecedores[i].setCredito(cred);
-									cout << " Saldo atualizado com sucesso! " << fornecedores[i].getSaldo() << endl;
+									cout << "\tSaldo atualizado com sucesso!" << fornecedores[i].getSaldo() << endl;
+									cout << endl;
 								}
 
 								if(t == 3)
 								{
 									cout << " Digite novo valor da divida: "; cin >> div;
 									fornecedores[i].setDivida(div);
-									cout << " Saldo atualizado com sucesso! " << fornecedores[i].getSaldo() << endl;
+									cout << "\tSaldo atualizado com sucesso!" << fornecedores[i].getSaldo() << endl;
+									cout << endl;
 								}
 							}
 						}
-						
 					}
 					break;
 					
@@ -248,7 +255,9 @@ void SistGes::Atualiza()
 					{
 						cout << " Nome do Administrador: " << administradores[i].getNome () << endl;
 					}
-					cout << " Digite o novo nome do Administrador: "; cin >> n;
+					cout << endl;
+					cout << " Digite o nome do Administrador a ser atualizado: "; cin >> n;
+					cout << endl;
 					for(int i = 0; i < administradores.size(); i++)
 					{
 						if(n == administradores[i].getNome())
@@ -266,26 +275,27 @@ void SistGes::Atualiza()
 								{	
 									cout << " Digite o novo nome: "; cin >> n;
 									administradores[i].setNome(n);
-									cout << " Nome atualizado com sucesso! " << administradores[i].getNome() << endl;
+									cout << "\tNome atualizado com sucesso!" << administradores[i].getNome() << endl;
+									cout << endl;
 								}
 
 								if(t == 2)
 								{							
 									cout << " Digite o novo salario: "; cin >> s;
 									administradores[i].CalcularSalario(s);	
-									cout << " valor de salario atualizado com sucesso: " << administradores[i].getSalario() << endl;
+									cout << "\tValor do salario atualizado com sucesso!" << administradores[i].getSalario() << endl;
+									cout << endl;
 								}
 
 								if(t == 3)
 								{			
 									cout << " Digite novo valor de ajujda de custo: "; cin >> ac;
 									administradores[i].setAjCusto(ac);		
-									cout << " valor de ajuda de custo atualizado com sucesso: " << administradores[i].getAjCusto() << endl;
+									cout << "\tValor da ajuda de custo atualizado com sucesso!" << administradores[i].getAjCusto() << endl;
+									cout << endl;
 								}
 							}
-						
 						}
-						
 					}
 					break;
 					
@@ -294,7 +304,9 @@ void SistGes::Atualiza()
 					{
 						cout << " Nome do operador: " << operarios[i].getNome() << endl;
 					}
-					cout << " Digite o novo nome do operario: "; cin >> n;
+					cout << endl;
+					cout << " Digite o nome do operario a ser atualizado: "; cin >> n;
+					cout << endl;
 					for(int i = 0; i < operarios.size(); i++)
 					{
 						if(n == operarios[i].getNome())
@@ -312,24 +324,26 @@ void SistGes::Atualiza()
 								{
 									cout << " Digite novo nome: "; cin >> n;
 									operarios[i].setNome(n);
-									cout << " Nome atualizado com sucesso! " << operarios[i].getNome() << endl;
+									cout << "\tNome atualizado com sucesso!" << operarios[i].getNome() << endl;
+									cout << endl;
 								}
 
 								if(t == 2)
 								{
 									cout << " Digite o novo salario: "; cin >> s;
 									operarios[i].CalcularSalario(s);
-									cout << " salario atualizado com sucesso: " << operarios[i].getSalario() << endl;
+									cout << "\tSalario atualizado com sucesso!" << operarios[i].getSalario() << endl;
+									cout << endl;
 								}
 
 								if(t == 3)
 								{
 									cout << " Digite o novo valor da producao: "; cin >> valProd;
 									operarios[i].setProduto(valProd);
-									cout << " valor de producao atualizado com sucesso: " << operarios[i].getValProd() << endl;
+									cout << "\tValor da producao atualizado com sucesso!" << operarios[i].getValProd() << endl;
+									cout << endl;
 								}
 							}
-
 						}
 				}
 				
